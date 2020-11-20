@@ -1,0 +1,8 @@
+npm install @apollo/client graphql
+yarn add -D @graphql-codegen/
+yarn add -D @graphql-codegen/typescript-operations
+yarn graphql-codegen init
+
+
+
+https://spacexdata.herokuapp.com/graphql

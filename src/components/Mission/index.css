@@ -1,0 +1,23 @@
+.list {
+
+    margin-top: 20px;
+    font-size : 20px;
+    width : 300px;
+  
+ 
+
+}
+
+
+.listItem:hover {
+
+
+
+    font-size: 30px;
+    background-color: 'grey';
+    
+
+
+
+
+}
