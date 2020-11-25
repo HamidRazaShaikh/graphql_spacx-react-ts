@@ -1,7 +1,6 @@
 import React from "react";
 import { LaunchesInfoQuery } from "./../../generated/graphql";
-import ListGroup from "react-bootstrap/listGroup";
-import Container from "react-bootstrap/Container";
+
 import InputGroup from "react-bootstrap/InputGroup";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
@@ -18,30 +17,31 @@ interface Props extends idProps {
 
 const MissionList: React.FC<Props> = ({ data, handlePassId }) => {
   return (
-    <Container>
-      <InputGroup className="mb-3">
-        <DropdownButton
-          as={InputGroup.Prepend}
-          variant="outline-secondary"
-          title="Dropdown"
-          id="input-group-dropdown-1"
-        >
-          {data.launches?.map((launchObj, id) => {
-            let key = id + 1;
+    <div className="appBar">
+      <div className="nav">
+        <h3> spaceX-app</h3>
+      </div>
 
-            return (
-              <Dropdown.Item
-                className="listItem"
-                key={id}
-                onClick={() => handlePassId(key)}
-              >
-                {launchObj?.mission_name}
-              </Dropdown.Item>
-            );
-          })}
-        </DropdownButton>
-      </InputGroup>
-    </Container>
+      <div className="button">
+        <InputGroup className="inputButtton">
+          <DropdownButton title="Select Mission" variant="danger">
+            {data.launches?.map((launchObj, id) => {
+              let key = id + 1;
+
+              return (
+                <Dropdown.Item
+                  className="listItem"
+                  key={id}
+                  onClick={() => handlePassId(key)}
+                >
+                  {launchObj?.mission_name}
+                </Dropdown.Item>
+              );
+            })}
+          </DropdownButton>
+        </InputGroup>
+      </div>
+    </div>
   );
 };
 

@@ -7,12 +7,12 @@ import MissionsContainer from "./components/Mission/index";
 
 export default function SpacexApp() {
   return (
-    
-
-     
-        <MissionsContainer />       
-
-    
-
+    <Container fluid>
+      <Row>
+        <Col>
+          <MissionsContainer />
+        </Col>
+      </Row>
+    </Container>
   );
 }

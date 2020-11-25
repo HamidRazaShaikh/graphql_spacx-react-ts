@@ -1,23 +1,67 @@
-.list {
+.appBar {
 
-    margin-top: 20px;
-    font-size : 20px;
-    width : 300px;
-  
- 
+    background-image: linear-gradient(180deg, rgb(149, 164, 240) 0%, rgb(132, 224, 240) 100%);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5;
 
 }
 
 
+.list {
+
+    margin-top: 20px;
+    font-size: 12px;
+    width: 150px;
+}
+
 .listItem:hover {
 
-
-
     font-size: 30px;
-    background-color: 'grey';
+    background-color: rgb(71, 71, 71);
+}
+
+.button {
+
+    margin-right: 10px;
+    margin-top: 10px;
+
+}
+
+
+.nav {
+
+    margin-left: 10px;
+    margin-top: 10px;
+    color: rgb(180, 19, 19)
+}
+
+.mainDiv {
+
+    margin-right: -13px;
+    margin-left: -13px;
+    
+}
+
+.loading {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top : 300px
     
 
+}
 
+.laodingText {
 
+    position : 'absolute';
+    
 
+    
+    
+   
+
+    
 }
