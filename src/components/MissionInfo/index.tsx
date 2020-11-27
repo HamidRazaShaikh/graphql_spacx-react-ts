@@ -29,31 +29,36 @@ const MissionDetail: React.FC<Props> = ({ id }) => {
           animation="border"
           style={{
             height: 50,
-            width: 50,            
+            width: 50,
             color: "blue",
           }}
         />
       </div>
     );
 
-  if (error || !data) return <h1> error</h1>;
+  if (error || !data)
+    return (
+      <h5 className="error">
+        {" "}
+        Oops! something went wrong. check your internet conncection.
+      </h5>
+    );
+
   const info = data.launch;
 
   const images = () => {
     const imageUrl: any = info?.links?.flickr_images;
 
-    if (imageUrl.length == 0) {
+    if (imageUrl.length === 0) {
       return <h6> Images dont exist for this mission. </h6>;
     } else if (info?.links?.flickr_images?.length !== 0) {
       return (
-        <Carousel style={{ margin: "auto" }}>
+        <Carousel style={{ margin: "auto" }} slide={false} fade={false}>
           {imageUrl.map((url: String, id: number) => {
-            console.log(url);
             return (
-              <Carousel.Item>
+              <Carousel.Item key={id}>
                 <img
                   className="d-block w-100"
-                  key={id}
                   src={String(url)}
                   alt="First slide"
                   style={{ height: 400, width: 300, padding: 5 }}
@@ -71,7 +76,7 @@ const MissionDetail: React.FC<Props> = ({ id }) => {
 
   return (
     <div>
-      <Card border="dark" className="main">
+      <Card border="info" className="main" bg="info">
         <Card.Header>launch Year : {info?.launch_year}</Card.Header>
         <Card.Header>launch Site : {info?.launch_site?.site_name} </Card.Header>
         <Card.Header>Rocket name : {info?.rocket?.rocket_name} </Card.Header>

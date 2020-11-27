@@ -1,6 +1,6 @@
 .appBar {
 
-    background-image: linear-gradient(180deg, rgb(149, 164, 240) 0%, rgb(132, 224, 240) 100%);
+    background-image: linear-gradient(180deg, rgb(31, 57, 187) 0%, rgb(122, 228, 245) 100%);
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -12,9 +12,12 @@
 .list {
 
     margin-top: 20px;
+    margin-right: 20px;
     font-size: 12px;
-    width: 150px;
+
+
 }
+
 
 .listItem:hover {
 
@@ -33,15 +36,15 @@
 .nav {
 
     margin-left: 10px;
-    margin-top: 10px;
-    color: rgb(180, 19, 19)
+    margin-top: 15px;
+    color: white;
 }
 
 .mainDiv {
 
-    margin-right: -13px;
-    margin-left: -13px;
-    
+    margin-right: -15px;
+    margin-left: -15px;
+    height: 100%
 }
 
 .loading {
@@ -49,19 +52,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top : 300px
-    
-
+    margin-top: 300px
 }
 
 .laodingText {
 
-    position : 'absolute';
-    
+    position: 'absolute';
 
-    
-    
-   
 
-    
+}
+
+.error {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 300px;
+    text-align: center;
 }

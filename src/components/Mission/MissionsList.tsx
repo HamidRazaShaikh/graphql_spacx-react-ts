@@ -19,18 +19,24 @@ const MissionList: React.FC<Props> = ({ data, handlePassId }) => {
   return (
     <div className="appBar">
       <div className="nav">
-        <h3> spaceX-app</h3>
+        <h5>SpaceX-Client-app</h5>
       </div>
 
       <div className="button">
         <InputGroup className="inputButtton">
-          <DropdownButton title="Select Mission" variant="danger">
+          <DropdownButton
+            as={InputGroup.Prepend}
+            title="Select Mission"
+            variant="info"
+            id="input-group-dropdown-1"
+          >
             {data.launches?.map((launchObj, id) => {
               let key = id + 1;
 
               return (
                 <Dropdown.Item
                   className="listItem"
+                  href="#"
                   key={id}
                   onClick={() => handlePassId(key)}
                 >

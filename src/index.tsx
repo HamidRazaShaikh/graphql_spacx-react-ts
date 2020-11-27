@@ -4,6 +4,7 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import client from './config';
 import { ApolloProvider } from '@apollo/client';
+import swDev from './swDev';
 
 
 // import * as serviceWorker from './serviceWorker';
@@ -22,3 +23,6 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 // serviceWorker.unregister();
+
+
+swDev();

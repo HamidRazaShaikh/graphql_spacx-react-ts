@@ -2,13 +2,9 @@ import React, { useState } from "react";
 import { useLaunchesInfoQuery } from "./../../generated/graphql";
 import MissionsList from "./MissionsList";
 import MissionDetail from "./../MissionInfo/index";
-import Loading from './loading';
+import Loading from "./loading";
 
 import "./index.css";
-
-
-
-
 
 const MissionsContainer = () => {
   const [id, setId] = useState(16);
@@ -19,21 +15,20 @@ const MissionsContainer = () => {
 
   const { data, error, loading } = useLaunchesInfoQuery();
 
-  if (loading)
+  if (loading) return <Loading />;
+
+  if (error || !data)
     return (
-      
-      <Loading/>
-      
+      <h5 className="error">
+        {" "}
+        Oops! something went wrong. check your internet conncection.
+      </h5>
     );
 
-  if (error || !data) return <h1> error...</h1>;
-
-  console.log(data);
-
   return (
-    <div className = 'mainDiv'>
+    <div className="mainDiv">
       <MissionsList data={data} handlePassId={handlePassId} />
-      <MissionDetail id={id}  />
+      <MissionDetail id={id} />
     </div>
   );
 };
