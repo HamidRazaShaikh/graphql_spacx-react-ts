@@ -1,6 +1,7 @@
 {
   "short_name": "SpaceX app",
   "name": "spaceX app",
+  
   "icons": [
     {
       "src": "logospacexapp.png",
